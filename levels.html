@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <!-- <link rel="stylesheet" href="all.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="levels.css">
+</head>
+
+<body onload="bgstart()">
+    <div class="bg" id="backgroung-area">
+        <!-- background music  -->
+        <audio loop id="background-song">
+            <source src="relaxing-light-background-116686.mp3" type="audio/mp3">
+        </audio>
+        <!-- Navbar section  -->
+        <nav id="navbar">
+            <button class="nav-btn hbtn" onclick="show_help_popup()"><i class="fa-solid fa-gamepad"></i><span
+                    class="nav-btntxt"> HELP</span>
+            </button>
+            <button class="nav-btn" onclick="show_setting_popup()"><i class="fa-sharp fa-solid fa-gear"></i><span
+                    class="nav-btntxt"> SETTINGS</span>
+            </button>
+        </nav>
+
+
+        <div class="home-heading">
+            <h1> Levels...</h1>
+        </div>
+
+        <div class="lvlsection">
+
+            <div class="basic" onclick="showpreview()">
+                <div class="imgpre">
+                    <img class="smallpreimg" src="lvl1.png" alt="">
+                </div>
+                <h1 class="pretext">Preview...</h1>
+            </div>
+
+            <div class="basic" onclick="show2()">
+                <div class="imgpre">
+                    <img class="smallpreimg" src="lvl2.png" alt="">
+                </div>
+                <h1 class="pretext">Preview...</h1>
+            </div>
+
+            <div class="basic" onclick="show3()">
+                <div class="imgpre">
+                    <img class="smallpreimg" src="lvl3.png" alt="">
+                </div>
+                <h1 class="pretext">Preview...</h1>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <!-- setting popup section  -->
+    <div class="setting-popup" id="setting-box-pop-up">
+        <div class="info">
+            <button class="settings-btn" onclick="close_setting_popup()"><i class="fa-solid fa-xmark"></i></button>
+            <h2 class="setting-h2">SETTINGS..</h2>
+            <p class="setting-para">Controllers for the Background Music</p>
+            <button class="music-btn" onclick="bgstart()"><i class="fa-solid fa-play"></i>START</button>
+            <button class="music-btn" onclick="bgpause()"><i class="fa-solid fa-pause"></i>PAUSE</button>
+            <button class="setting-home-btn"><a href="home.html">HOME</a></button>
+            <button class="setting-hint-bnt" onclick="switch_to_help()">HELP</button>
+        </div>
+    </div>
+
+    <!-- help popup section  -->
+    <div class="help-popup" id="help-box-pop-up">
+        <button class="settings-btn" onclick="close_help_popup()"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="hint-h2">HELP..</h2>
+        <p class="setting-para helppara">Welcome, to the helping section..</p>
+        <p class="setting-para helppara">Having issues with the game. Here click on the Rules</p>
+        <!-- to avoid duplication using same class for the following -->
+        <button class=" rules-btn" onclick="show_rules_popup()">Rules</button>
+        <button class="help-lvl-btn"><a href="home.html">HOME</a></button>
+        <button class="help-setting-bnt" onclick="switch_to_settting_from_help() ">SETTING</button>
+    </div>
+    <!-- previewpopup  lvl1  -->
+    <div class="preview-popup" id="previewshow">
+        <button class="settings-btn" onclick="close_preview_popup()"><i class="fa-solid fa-xmark"></i></button>
+        <h1 class="winhead">Preview...</h1>
+        <div class="imgpre">
+            <img class="preimg" src="lvl1.png" alt="">
+        </div>
+    </div>
+
+    <!-- previewpopup  lvl2  -->
+    <div class="preview-popup" id="showpreview2">
+        <button class="settings-btn" onclick="close2()"><i class="fa-solid fa-xmark"></i></button>
+        <h1 class="winhead">Preview...</h1>
+        <div class="imgpre">
+            <img class="preimg" src="lvl2.png" alt="">
+        </div>
+    </div>
+
+    <!-- previewpopup  lvl3  -->
+    <div class="preview-popup" id="showpreview3">
+        <button class="settings-btn" onclick="close3()"><i class="fa-solid fa-xmark"></i></button>
+        <h1 class="winhead">Preview...</h1>
+        <div class="imgpre">
+            <img class="preimg" src="lvl3.png" alt="">
+        </div>
+    </div>
+
+
+    <script src="home.js"></script>
+    <script src="level_1.js"></script>
+    <script src="lvl.js"></script>
+</body>
+
+</html>

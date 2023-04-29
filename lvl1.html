@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome link  -->
+    <!-- <link rel="stylesheet" href="all.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS LINKS  -->
+    <link rel="stylesheet" href="Level_1.css">
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body id="level1">
+
+    <div class="bg" id="backgroung-area">
+        <!-- background music  -->
+        <audio loop id="background-song">
+            <source src="relaxing-light-background-116686.mp3" type="audio/mp3">
+        </audio>
+        <!-- Navbar section  -->
+        <nav id="navbar">
+            <button class="nav-btn hbtn" onclick="show_hint_popup()"><i class="fa-solid fa-lightbulb"></i><span
+                    class="nav-btntxt"> HINT</span>
+            </button>
+            <button class="nav-btn" onclick="show_setting_popup()"><i class="fa-sharp fa-solid fa-gear"></i><span
+                    class="nav-btntxt"> SETTINGS</span>
+            </button>
+        </nav>
+
+
+        <!-- Game section  -->
+        <section id="gamearea">
+            <h1 class="lvl">LEVEL 1</h1>
+            <div class="gameboard">
+                <!-- first card  -->
+                <div class="g-card" data-framework="burger">
+                    <img class="front" src="burger.png" alt="burger">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="burger">
+                    <img class="front" src="burger.png" alt="burger">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- second card  -->
+                <div class="g-card" data-framework="cake">
+                    <img class="front" src="cake.png" alt="cake">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="cake">
+                    <img class="front" src="cake.png" alt="cake">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- third card -->
+                <div class="g-card" data-framework="chocobar">
+                    <img class="front" src="chocobar.png" alt="chocobar">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="chocobar">
+                    <img class="front" src="chocobar.png" alt="chocobar">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- fourth card  -->
+                <div class="g-card" data-framework="coffe">
+                    <img class="front" src="coffe.png" alt="coffe">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="coffe">
+                    <img class="front" src="coffe.png" alt="coffe">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- fifth card  -->
+                <div class="g-card" data-framework="coke">
+                    <img class="front" src="coke.png" alt="coke">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="coke">
+                    <img class="front" src="coke.png" alt="coke">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- sixth card -->
+                <div class="g-card" data-framework="donut">
+                    <img class="front" src="donut.png" alt="donut">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="donut">
+                    <img class="front" src="donut.png" alt="donut">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+            </div>
+        </section>
+
+        <!-- Score Area  -->
+        <div class="score">
+            <span id="score">Moves: 00</span>
+        </div>
+
+        <!-- restart btn  -->
+        <div class="restart">
+            <button id="restart" class="restart-btn" onclick="restart()">RESTART</button>
+        </div>
+
+        <!-- home btn  -->
+        <div class="home">
+            <a href="home.html"><button id="home" class="home-btn">HOME</button></a>
+        </div>
+
+         <!-- preview btn  -->
+         <div class="preview">
+            <button id="level" class="preview-btn" onclick="showpreview()">Preview</button>
+        </div>
+
+
+        <!-- foot  -->
+        <div class="foot">
+            <p>Some memories are simply unforgettable...</p>
+        </div>
+
+    </div>
+
+    <!-- setting popup section  -->
+    <div class="setting-popup" id="setting-box-pop-up">
+        <button class="settings-btn" onclick="close_setting_popup()"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="setting-h2">SETTINGS..</h2>
+        <p class="setting-para">Controllers for the Background Music</p>
+        <button class="music-btn" onclick="bgstart()"><i class="fa-solid fa-play"></i>START</button>
+        <button class="music-btn" onclick="bgpause()"><i class="fa-solid fa-pause"></i>PAUSE</button>
+        <button class="setting-home-btn"><a href="home.html">HOME</a></button>
+        <button class="setting-hint-bnt" onclick="switch_to_hint()">HINT</button>
+    </div>
+
+    <!-- hint popup section  -->
+    <div class="hint-popup" id="hint-box-pop-up">
+        <button class="settings-btn" onclick="close_hint_popup()"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="hint-h2">HINT..</h2>
+        <p class="hint-para">Ops! Its seems that you don't holds our premium..</p>
+        <p class="hint-para">To use Hint feature you need to subscribe..</p>
+        <button class="premium-btn"><a href="#">GO Premimum</a></button>
+        <button class="hint-home-btn"><a href="home.html">HOME</a></button>
+        <button class="hint-setting-bnt" onclick="switch_to_settting()">SETTING</button>
+    </div>
+
+    <!-- winpopup area  -->
+    <div class="win-popup" id="winy">
+        <h1 class="winhead">YOU WON...</h1>
+        <a href="home.html"><button class="winhomebtn">Home</button></a> <br>
+        <span class="winsco" id="win-score">Score: </span>
+        <a href="lvl1.html"><button class="playagain">Play Again</button></a> <br>
+        <a href="lvl2.html"><button class="nxtlvl">Next Level</button></a>
+    </div>
+
+     <!-- preview -->
+     <div class="preview-popup" id="previewshow">
+        <button class="settings-btn" onclick="close_preview_popup()"><i class="fa-solid fa-xmark"></i></button>
+        <h1 class="winhead">Preview...</h1>
+        <div class="imgpre">
+        <img class = "preimg" src="../img/lvl2.png" alt=""></div>
+    </div>
+
+    <script src="level_1.js"></script>
+</body>
+
+</html>

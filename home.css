@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "Myfont";
+    src: url(BruceForeverRegular-X3jd2.ttf) format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Myfont";
+    outline: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: url("clone-bg.jpg") no-repeat center center/cover;
+    /* border: 1px solid red; */
+    /* animation: bgcolor 6s 1000 ; */
+}
+
+/* rules area  */
+
+.rules-popup {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    /* background: linear-gradient(135deg, #004080, #00001a); */
+    background: linear-gradient(135deg, #001a33, #00001a);
+    transform: translate(-50%, -50%) scale(0.2);
+    width: 400px;
+    height: 400px;
+    /* border: 1px solid red; */
+    border-radius: 15px;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, top 0.6s ease;
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.show-rules-popup {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+.rules-btn {
+    width: 150px;
+    position: absolute;
+    left: 28%;
+    cursor: pointer;
+    /* transform: translateX(-60%); */
+    border: none;
+    border-radius: 15px;
+    margin: 35px 15px 10px 15px;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Myfont";
+}
+
+.rules-btn:active {
+    transform: scale(0.9);
+}
+
+.marpara {
+    margin-bottom: 20px;
+}
+
+.home-heading {
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    height: 12%;
+    margin: 40px auto 0px;
+}
+
+/* gameing-area  */
+.areagamming{
+    width: 100%;
+    height: 420px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    /* border: 1px solid red; */
+    padding:20px 100px;
+}
+
+.game-gif{
+    width: 35%;
+    height: 100%;
+    margin-left: 50px;
+    /* border: 1px solid red; */
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.game-gif>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    opacity: 0.9;
+}
+
+.gaming-btn{
+    /* border: 1px solid red; */
+    width: 40%;
+    position: relative;
+    margin-right: 100px;
+    height: 100%;
+}
+
+
+
+.lvl-btn,
+.home-rule,
+.home-start,
+.home-sound,
+.home-about,
+.home-more {
+    padding: 10px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+    width: 150px;
+    border-radius: 20px;
+    height: 45px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.lvl-btn>a {
+    text-decoration: none;
+    color: black;
+}
+
+.home-rule{
+    left: 60%;
+    top: 10%;
+}
+.home-sound{
+    left: 60%;
+    top: 40%;
+}
+.home-more {
+    left: 60%;
+    top: 70%;
+}
+.home-start{
+    top: 40%;
+    left: 10%;
+}
+
+.home-start {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-start>a {
+    text-decoration: none;
+    color: black;
+}
+
+.home-about{
+    top: 70%;
+    left: 10%;
+}
+
+
+
+.lvl-btn:active,
+.home-rule:active,
+.home-start:active,
+.home-sound:active,
+.home-about:active,
+.home-more:active {
+    transform: scale(0.9);
+} 
+
+
+.foot {
+    width: 50%;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.login>a{
+    text-decoration: none;
+    color: black;
+}

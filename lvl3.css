@@ -1,0 +1,41 @@
+
+/* Game Area  */
+
+#gamearea {
+    width: 100%;
+    height: 600px;
+}
+
+/* Game Area Board part  */
+
+.gameboard {
+    width: 65%;
+    height: 540px;
+    margin: auto 50px;
+    padding: 2px;
+}
+
+.g-card {
+    width: 19%;
+    height: 17%;
+    margin: 2px;
+}
+
+/* foot area  */
+
+.foot {
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+/* Moves area  */
+.score {
+    top: 12%;
+    right: 6%;
+}
+
+.hint-setting-bnt>a{
+    text-decoration: none;
+    color: black;
+}

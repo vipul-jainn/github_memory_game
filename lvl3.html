@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome link  -->
+    <!-- <link rel="stylesheet" href="all.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- link for css  -->
+    <link rel="stylesheet" href="Level_1.css">
+    <link rel="stylesheet" href="lvl3.css">
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="bg" id="backgroung-area">
+        <!-- background music  -->
+        <audio loop id="background-song">
+            <source src="relaxing-light-background-116686.mp3" type="audio/mp3">
+        </audio>
+        <!-- Navbar section  -->
+        <nav id="navbar">
+            <button class="nav-btn hbtn" onclick="show_hint_popup()"><i class="fa-solid fa-lightbulb"></i><span
+                    class="nav-btntxt"> HINT</span>
+            </button>
+            <button class="nav-btn" onclick="show_setting_popup()"><i class="fa-sharp fa-solid fa-gear"></i><span
+                    class="nav-btntxt"> SETTINGS</span>
+            </button>
+        </nav>
+
+        <!-- time area -->
+        <div class="timebox">
+            <h3>TIme: </h3> <span id="showtimebox">3 : 00</span>
+        </div>
+
+        <!-- Game section  -->
+        <section id="gamearea">
+            <h1 class="finallvl">FINAL LEVEL</h1>
+            <div class="gameboard">
+                <!-- first card  -->
+                <div class="g-card" data-framework="burger">
+                    <img class="front" src="burger.png" alt="burger">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="burger">
+                    <img class="front" src="burger.png" alt="burger">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- second card  -->
+                <div class="g-card" data-framework="cake">
+                    <img class="front" src="cake.png" alt="cake">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="cake">
+                    <img class="front" src="cake.png" alt="cake">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- third card -->
+                <div class="g-card" data-framework="chocobar">
+                    <img class="front" src="chocobar.png" alt="chocobar">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="chocobar">
+                    <img class="front" src="chocobar.png" alt="chocobar">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- fourth card  -->
+                <div class="g-card" data-framework="coffe">
+                    <img class="front" src="coffe.png" alt="coffe">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="coffe">
+                    <img class="front" src="coffe.png" alt="coffe">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- fifth card  -->
+                <div class="g-card" data-framework="coke">
+                    <img class="front" src="coke.png" alt="coke">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="coke">
+                    <img class="front" src="coke.png" alt="coke">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- sixth card -->
+                <div class="g-card" data-framework="donut">
+                    <img class="front" src="donut.png" alt="donut">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="donut">
+                    <img class="front" src="donut.png" alt="donut">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- seventh card  -->
+                <div class="g-card" data-framework="dumpling">
+                    <img class="front" src="dumplings.png" alt="dumpling">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="dumpling">
+                    <img class="front" src="dumplings.png" alt="dumpling">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- eigth card -->
+                <div class="g-card" data-framework="ice-cream">
+                    <img class="front" src="ice-cream.png" alt="ice-cream">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="ice-cream">
+                    <img class="front" src="ice-cream.png" alt="ice-cream">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- ninth card -->
+                <div class="g-card" data-framework="pasta">
+                    <img class="front" src="pasta.png" alt="pasta">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="pasta">
+                    <img class="front" src="pasta.png" alt="pasta">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <!-- tenth card -->
+                <div class="g-card" data-framework="pepsi">
+                    <img class="front" src="pepsi.png" alt="pepsi">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+                <div class="g-card" data-framework="pepsi">
+                    <img class="front" src="pepsi.png" alt="pepsi">
+                    <img class="back" src="new-mark.png" alt="question-mark">
+                </div>
+            </div>
+        </section>
+
+        <!-- Score Area  -->
+        <div class="score">
+            <span id="score">Moves: 30</span>
+        </div>
+
+        <!-- restart btn  -->
+        <div class="restart">
+            <button id="restart" class="restart-btn" onclick="restart()">RESTART</button>
+        </div>
+
+        <!-- home btn  -->
+        <div class="home">
+            <a href="home.html"><button id="home" class="home-btn">HOME</button></a>
+        </div>
+
+        <!--  next btn  -->
+        <div class="next">
+            <a href="lvl2.html"><button id="next" class="next-btn">Previous</button></a>
+        </div>
+
+        <!-- level btn  -->
+        <!-- <div class="level">
+            <button id="level" class="level-btn"><a href="levels.html">LEVELS</a></button>
+        </div> -->
+
+        <!-- foot  -->
+        <div class="foot">
+            <p>Some memories are simply unforgettable...</p>
+        </div>
+
+    </div>
+
+    <!-- setting popup section  -->
+    <div class="setting-popup" id="setting-box-pop-up">
+        <button class="settings-btn" onclick="close_setting_popup()"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="setting-h2">SETTINGS..</h2>
+        <p class="setting-para">Controllers for the Background Music</p>
+        <button class="music-btn" onclick="bgstart()"><i class="fa-solid fa-play"></i>START</button>
+        <button class="music-btn" onclick="bgpause()"><i class="fa-solid fa-pause"></i>PAUSE</button>
+        <button class="setting-home-btn"><a href="home.html">HOME</a></button>
+        <button class="setting-hint-bnt" onclick="switch_to_hint()">HINT</button>
+    </div>
+
+    <!-- hint popup section  -->
+    <div class="hint-popup" id="hint-box-pop-up">
+        <button class="settings-btn" onclick="close_hint_popup()"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="hint-h2">HINT..</h2>
+        <p class="hint-para">Ops! Its seems that you don't holds our premium..</p>
+        <p class="hint-para">To use Hint feature you need to subscribe..</p>
+        <button class="premium-btn"><a href="#">GO Premimum</a></button>
+        <button class="hint-home-btn"><a href="home.html">HOME</a></button>
+        <button class="hint-setting-bnt" onclick="switch_to_settting()">SETTING</button>
+    </div>
+
+    <!-- retry popup section  -->
+    <div class="retry-popup" id="retry-box-pop-up">
+        <!-- <button class="settings-btn" onclick="close_retry_popup()"><i class="fa-solid fa-xmark"></i></button> -->
+        <h2 class="hint-h2">Ops!!..</h2>
+        <p class="hint-para">It seems that your time is over...</p>
+        <p class="hint-para">Let's be bit more Quick...</p>
+        <button class="premium-btn retrypopupbtn" onclick="restart_andhide_popup()"><a href="#">Retry</a></button>
+        <button class="hint-home-btn"><a href="home.html">Quit</a></button>
+        <button class="hint-setting-bnt" ><a href="lvl2.html">Previous lvl</a>
+        </button>
+    </div>
+
+    <!-- show rules popup for final level  -->
+    <div class="showrule"  id="firstrule">
+        <button class="settings-btn" onclick="close_lvl3_popup()"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="hint-h2">Rules...</h2>
+        <p class="hint-para rulepara">For this level keep record of the  clock, <br> if your clock run out's. <br> Your game will be over ...</p>
+        <p class="hint-para rulepara">Apart from the timer there are limited moves,<br>  if you run out's of your moves. <br> Your gaame will be over...</p>
+
+    </div>
+    
+    <!-- winpopup area  -->
+    <div class="win-popup" id="winy">
+        <h1 class="winhead">YOU WON...</h1>
+        <a href="home.html"><button class="winhomebtn">Home</button></a> <br>
+        <a href="lvl3.html"><button class="playagain newbtn">Play Again</button></a> <br>
+        <p>YOU HAVE SUCESSFULLY COMPLETED THE MEMORY GAME... <br>
+        STAY IN OUR TOUCH FOR FUTURE GAMES...</p>
+    </div>
+    <script src="lvl3.js"></script>
+</body>
+
+</html>

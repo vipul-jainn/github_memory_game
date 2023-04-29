@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <!-- <link rel="stylesheet" href="../CSS/levels.css"> -->
+    <!-- <link rel="stylesheet" href="all.css"> -->
+    <!-- <link rel="stylesheet" href="all.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="levels.css">
+</head>
+    <body onload="bgstart()" >
+    <div class="bg" id="backgroung-area">
+        <!-- background music  -->
+        <audio loop id="background-song">
+            <source src="relaxing-light-background-116686.mp3" type="audio/mp3">
+        </audio>
+        <!-- Navbar section  -->
+        <nav id="navbar">
+            <button class="nav-btn hbtn" onclick="show_help_popup()"><i class="fa-solid fa-gamepad"></i><span
+                    class="nav-btntxt"> HELP</span>
+            </button>
+            <button class="nav-btn" onclick="show_setting_popup()"><i class="fa-sharp fa-solid fa-gear"></i><span
+                    class="nav-btntxt"> SETTINGS</span>
+            </button>
+        </nav>
+
+
+        <div class="home-heading">
+            <h1> MEMORY GAME...</h1>
+        </div>
+
+        <!-- game gif  -->
+        <div class="areagamming">
+            <div class="game-gif">
+                <img src="home-gif.gif" alt="">
+            </div>
+            <div class="gaming-btn">
+                <button class="lvl-btn"><a href="levels.html">LEVELS</a></button>
+                <button class="home-rule" onclick="show_rules_popup()">RULES</button>
+                <button class="home-start"><i class="fa-solid fa-play"></i><a href="lvl1.html">PLAY</a></button>
+                <button class="home-sound" onclick="show_setting_popup()">SOUND</button>
+                <button class="home-about login"> <a href="login.html">Login</a> </button>
+                <button class="home-more">MORE</button>
+            </div>
+            
+        </div>
+        <div class="foot">
+            <p>Some memories are simply unforgettable...</p>
+        </div>
+
+    </div>
+
+    <!-- setting popup section  -->
+    <div class="setting-popup" id="setting-box-pop-up">
+        <div class="info">
+            <button class="settings-btn" onclick="close_setting_popup()"><i class="fa-solid fa-xmark"></i></button>
+            <h2 class="setting-h2">SETTINGS..</h2>
+            <p class="setting-para">Controllers for the Background Music</p>
+            <button class="music-btn" onclick="bgstart()"><i class="fa-solid fa-play"></i>START</button>
+            <button class="music-btn" onclick="bgpause()"><i class="fa-solid fa-pause"></i>PAUSE</button>
+            <button class="setting-home-btn"><a href="levels.html">LEVELS</a></button>
+            <button class="setting-hint-bnt" onclick="switch_to_help()">HELP</button>
+        </div>
+    </div>
+
+    <!-- help popup section  -->
+    <div class="help-popup" id="help-box-pop-up">
+        <button class="settings-btn" onclick="close_help_popup()"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="hint-h2">HELP..</h2>
+        <p class="setting-para helppara">Welcome, to the helping section..</p>
+        <p class="setting-para helppara">Having issues with the game. Here click on the Rules</p>
+        <!-- to avoid duplication using same class for the following -->
+        <button class=" rules-btn" onclick="show_rules_popup()">Rules</button>
+        <button class="help-lvl-btn"><a href="levels.html">LEVELS</a></button>
+        <button class="help-setting-bnt" onclick="switch_to_settting_from_help() ">SETTING</button>
+    </div>
+
+    <!-- rules popup section  -->
+    <div class="rules-popup" id="rules-box-pop-up">
+        <button class="settings-btn" onclick="close_rules_popup()"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="hint-h2">RULES...</h2>
+        <p class="setting-para marpara rulepara">Following are the rules for he game..</p>
+        <p class="setting-para rulepara">
+            1.Start the game by flipping a card. <br>
+            2.Then try to find another card that has the same image as the first. <br>
+            3.If you can't find a pair, the flipped cards will be flipped back with the face down.
+        </p>
+    </div>
+
+
+    <script src="home.js"></script>
+    <script src="level_1.js"></script>
+</body>
+</html>
